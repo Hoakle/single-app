@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "title": "Fake Title 2",
+      "content": "zasazsazs",
+      "author": "zasazsa",
+      "id": 5
+    },
+    {
+      "title": "Fake Title 3",
+      "content": "azeazeaze",
+      "author": "azeaze",
+      "id": 6
+    },
+    {
+      "title": "Fake Title",
+      "content": "szasazs",
+      "author": "azsazszs",
+      "id": 7
+    },
+    {
+      "title": "Fake Title 3",
+      "content": "adzazazdaz",
+      "author": "azdadz",
+      "id": 8
+    }
+  ]
+}

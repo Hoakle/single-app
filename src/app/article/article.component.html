@@ -1,0 +1,8 @@
+<div *ngIf="article" class="container-fluid">
+  <div class="row justify-content-between">
+      <h2 class="col-auto"> <a class="nav-link" routerLink="/articles/{{article.id}}" role="button">{{article.title}}</a></h2>
+      <span class="col-auto"> by {{article.author}} </span>
+  </div>
+  <p> {{article.content}} </p>
+  <button (click)="delete()" class="btn btn-primary"> Delete </button>
+</div>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SearchService } from './search.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Blog de fou';
+  searchForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private router: Router, private searchService: SearchService) {
+    this.searchForm = this.fb.group({
+      query: ['Search']
+    });
+  }
+
+  searchArticle() {
+    const formModel = this.searchForm.value;
+
+    this.router.navigateByUrl('/search');
+    this.searchService.searchArticles(formModel.query);
+  }
 }
