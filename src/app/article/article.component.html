@@ -1,8 +1,12 @@
 <div *ngIf="article" class="container-fluid">
-  <div class="row justify-content-between">
-      <h2 class="col-auto"> <a class="nav-link" routerLink="/articles/{{article.id}}" role="button">{{article.title}}</a></h2>
-      <span class="col-auto"> by {{article.author}} </span>
+  <div class="row justify-content-center">
+    <div class="col-11 col-sm-10 col-md-8 col-lg-6 article" routerLink="/articles/{{article.id}}">
+        <div class="row justify-content-between">
+            <h2 class="col-auto">{{article.title}}</h2>
+            <span class="col-auto"> by {{article.author}} </span>
+        </div>
+        <p> {{article.content}} </p>
+        <button (click)="delete()" class="btn btn-success"> Delete </button>
+    </div>
   </div>
-  <p> {{article.content}} </p>
-  <button (click)="delete()" class="btn btn-primary"> Delete </button>
 </div>

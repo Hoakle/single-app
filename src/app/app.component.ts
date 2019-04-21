@@ -14,14 +14,15 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder, private router: Router, private searchService: SearchService) {
     this.searchForm = this.fb.group({
-      query: ['Search']
+      query: ['']
     });
   }
 
   searchArticle() {
     const formModel = this.searchForm.value;
 
-    this.router.navigateByUrl('/search');
     this.searchService.searchArticles(formModel.query);
+    this.router.navigateByUrl('/search');
+    
   }
 }

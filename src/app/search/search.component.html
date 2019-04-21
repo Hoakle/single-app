@@ -1,3 +1,2 @@
-<p>
-  search works!
-</p>
+<div *ngIf="articles.length <= 0" style="text-align: center; color: black;">No articles found!</div>
+<app-article *ngFor="let article of articles" [article]="article" (deletedArticle)="delete($event)"></app-article>
